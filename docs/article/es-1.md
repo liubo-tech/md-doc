@@ -1,4 +1,4 @@
-# ES[7.6.x]学习笔记（一）Elasticsearch的安装与启动
+# ES7学习笔记（一）Elasticsearch的安装与启动
 
 Elasticsearch是一个非常好用的搜索引擎，和Solr一样，他们都是基于倒排索引的。今天我们就看一看Elasticsearch如何进行安装。
 
