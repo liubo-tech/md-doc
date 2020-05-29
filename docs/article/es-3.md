@@ -1,4 +1,4 @@
-# ES[7.6.x]学习笔记（三）新建索引
+# ES7学习笔记（三）新建索引
 
 ## 与ES的交互方式
 
@@ -78,7 +78,7 @@ http://192.168.73.130:9200/orgnization
 
 然后，我们通过`elasticsearch-head`插件观察一下刚才创建的索引，如图：
 
-![image-20200426110603566](D:\Vue-Project\vue-press\docs\article\es-3.assets\image-20200426110603566.png)
+![image-20200426110603566](es-3.assets/image-20200426110603566.png)
 
 我们可以看到索引`orgnization`已经创建好了，它有2个分片，分别是0和1，并且每个分片都是两个副本。如果我们仔细观察这个图，可以看出`node-130`节点中的0分片，和`node-132`节点中的1分片，它们的边框是加粗的，这说明它们是主节点，而边框没有加粗的节点是从节点，也就是我们说的副本节点。
 
@@ -92,7 +92,7 @@ GET /<index>
 
 在我们的例子中，查看`orgnization`索引的设置，我们在POSTMAN中发送如下的请求：
 
-![image-20200426154156002](D:\Vue-Project\vue-press\docs\article\es-3.assets\image-20200426154156002.png)
+![image-20200426154156002](es-3.assets/image-20200426154156002.png)
 
 我们可以看到索引的具体设置，比如：mapping的设置，分片和副本的设置。这些和我们创建索引时候的设置是一样的。
 
@@ -124,11 +124,11 @@ http://192.168.73.130:9200/orgnization/_mapping
 
 我们点击发送，返回的结果如图所示：
 
-![image-20200426162109087](D:\Vue-Project\vue-press\docs\article\es-3.assets\image-20200426162109087.png)
+![image-20200426162109087](es-3.assets/image-20200426162109087.png)
 
 添加索引字段成功，我们再使用`GET`查看一下索引，如图：
 
-![image-20200426162306090](D:\Vue-Project\vue-press\docs\article\es-3.assets\image-20200426162306090.png)
+![image-20200426162306090](es-3.assets/image-20200426162306090.png)
 
 我们可以成功的查询到新添加的索引字段了。
 

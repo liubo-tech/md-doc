@@ -159,7 +159,7 @@ docker image push ronaldoliubo/bulletinboard:1.0
 
 ## Docker的数据管理
 
-![types-of-mounts](D:\Vue-Project\vue-press\docs\article\docker-1.assets\types-of-mounts.png)
+![types-of-mounts](docker-1.assets/types-of-mounts.png)
 
 * volume：数据存储在主机上，非docker进程不能修改；
 * bind mount：数据存储在主机上，任何进程都可以修改；
